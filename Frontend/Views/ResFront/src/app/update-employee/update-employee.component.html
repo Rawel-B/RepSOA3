@@ -1,0 +1,35 @@
+<div class="container">
+    <div>
+        <h2>Update Employee :</h2>
+    </div>
+    <form>
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <label>ID</label>
+            <input readonly type="text" [(ngModel)]="currentEmployee.employeeid" name="employeeid" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>Name</label>
+            <input type="text" [(ngModel)]="currentEmployee.employeename" name="employeename" class="form-control">
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <label>Role</label>
+            <input type="text" [(ngModel)]="currentEmployee.employeerole" name="employeerole" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>Hire Date</label>
+            <input type="date" [ngModel]="currentEmployee.employeehiredate | date: 'yyyy-MM-dd'" 
+            (ngModelChange)=" currentEmployee.employeehiredate= $event" name="employeehiredate"  class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>Restaurant</label>
+            <select class="form-control form-control-lg" id="restaurantid" name="restaurantid" [(ngModel)]="updatedRestaurantid">
+                <option *ngFor="let res of restaurants" [value]="res.restaurantid">
+                    {{res.restaurantname}}
+                </option>  
+            </select>
+        </div>
+        <div class="mt-2">
+            <button type="submit" (click)="updateEmployee()" class="btn btn-success">Modifer</button>
+        </div>
+    </form>
+</div>
