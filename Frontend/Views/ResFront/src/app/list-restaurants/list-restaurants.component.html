@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="card shadow mb-4">
+        <div class="card-body">
+            <div class="col-sm-4 col-md-4 col-lg-4 mb-4">
+                <app-update-restaurant [restaurant]="updatedRes" (restaurantUpdated)= "restaurantUpdated($event)" [add]="add"></app-update-restaurant>
+            </div>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Restaurant Name</th>
+                        <th>Restaurant Address</th>
+                        <th>Restaurant Phone</th>
+                        <th>Restaurant Email</th>
+                        <th>Restaurant Website</th>
+                    </tr>
+                </thead>
+                <tbody *ngFor="let res of restaurants">
+                    <tr>
+                        <td>{{res.restaurantid}}</td>
+                        <td>{{res.restaurantname}}</td>
+                        <td>{{res.restaurantaddress}}</td>
+                        <td>{{res.restaurantphone}}</td>
+                        <td>{{res.restaurantemail}}</td>
+                        <td>{{res.restaurantwebsite}}</td>
+                        <td><a class="btn btn-success" (click)="updateRes(res)">Edit</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>

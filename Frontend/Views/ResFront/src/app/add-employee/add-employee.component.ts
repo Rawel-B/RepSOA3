@@ -20,7 +20,7 @@ export class AddEmployeeComponent implements OnInit {
   ngOnInit() : void {
     //this.restaurants = this.employeeService.listRestaurants();
     //this.employeeService.listRestaurants().subscribe(rests => {this.restaurants = rests;console.log(rests);});
-    this.employeeService.listRestaurants().subscribe(rests => {console.log(rests);this.restaurants = rests._embedded.restaurants;});
+    this.employeeService.listRestaurants().subscribe(rests => {this.restaurants = rests._embedded.restaurants;console.log(rests);});
   }
 
   addEmployee(){
@@ -36,7 +36,7 @@ export class AddEmployeeComponent implements OnInit {
     this.newEmployee.restaurant = this.restaurants.find(res => res.restaurantid == this.newRestaurantid)!;
     this.employeeService.addEmployee(this.newEmployee).subscribe(emp => {
       console.log(emp);
-      this.router.navigate(['produits']);
+      this.router.navigate(['employees']);
     });
   }
 

@@ -1,0 +1,25 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-EmployeesApplication<employees>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.tp.restaurant.EmployeesApplication",
+            "projectName": "employees",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env",
+            "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=52353 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=employees"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-UsersMicroserviceApplication<users-microservice>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.tp.users.UsersMicroserviceApplication",
+            "projectName": "users-microservice",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

@@ -1,0 +1,36 @@
+<form>
+    <div [hidden]="add">
+        <label>Restaurant ID</label>
+        <input type="text" [(ngModel)]="restaurant.restaurantid" name="restaurantid" class="form-control w-25">
+    </div>
+    <div>
+        <label>Restaurant Name</label>
+        <input type="text" [(ngModel)]="restaurant.restaurantname" name="restaurantname" class="form-control"
+            placeholder="Enter A Name ...">
+    </div>
+    <div>
+        <label>Restaurant Address</label>
+        <input type="text" [(ngModel)]="restaurant.restaurantaddress" name="restaurantaddress" class="form-control"
+            placeholder="Enter An Address ...">
+    </div>
+    <div>
+        <label>Restaurant Phone</label>
+        <input type="text" [(ngModel)]="restaurant.restaurantphone" name="restaurantphone" class="form-control"
+            placeholder="Enter A Phone Number ...">
+    </div>
+    <div>
+        <label>Restaurant Email</label>
+        <input type="text" [(ngModel)]="restaurant.restaurantemail" name="restaurantemail" class="form-control"
+            placeholder="Enter An Email Address ...">
+    </div>
+    <div>
+        <label>Restaurant Website</label>
+        <input type="text" [(ngModel)]="restaurant.restaurantwebsite" name="restaurantwebsite" class="form-control"
+            placeholder="Enter A Website Link ...">
+    </div>
+    <div class="mt-2">
+        <button type="submit" [disabled]="!restaurant.restaurantname" class="btn btn-success"
+        (click)="saveRestaurant()" >{{add ? 'Add' : 'Modify'}}
+        </button>
+    </div>
+</form>

@@ -13,10 +13,11 @@ const httpOptions = {headers: new HttpHeaders( {'Content-Type': 'application/jso
 export class EmployeeService {
 
   apiURL : string = "http://localhost:8080/employees/api"
+
   apiURLRes : string = "http://localhost:8080/employees/res"
   //employees : Employee[];
   //restaurants : Restaurant[];
-
+  api :String="http://localhost:8080/employees/api/EmployeeRes/1"
   constructor(private http : HttpClient) { 
    /* this.restaurants = 
     [
@@ -89,12 +90,23 @@ export class EmployeeService {
     return this.http.get<RestaurantWrapper>(this.apiURLRes);
   }
   
-  searchByRestaurant(restaurantid : number):Observable<Restaurant[]>{
-    const url = `${this.apiURL}/empsres/${restaurantid}`;
-    return this.http.get<Restaurant[]>(url);
+  searchByRestaurant(restaurantid : number):Observable<Employee[]>{
+    //const url = `${this.apiURL}/empsres/${restaurantid}`;
+    const url = `${this.apiURL}/EmployeeRes/${restaurantid}`;
+    return this.http.get<Employee[]>(url);
   }
-
+  
   /*consultRestaurant(id:number): Restaurant{
     return this.restaurants.find(res => res.restaurantid == id)!;
   }*/
+  
+  searchEmps(name: string) : Observable<Employee[]>{
+    const url = `${this.apiURL}/empsByName/${name}`;
+    return this.http.get<Employee[]>(url);
+  }
+
+  addRestaurant( res: Restaurant):Observable<Restaurant>{
+    return this.http.post<Restaurant>(this.apiURLRes, res, httpOptions);
+  }
+  
 }

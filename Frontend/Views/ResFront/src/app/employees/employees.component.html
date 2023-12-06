@@ -18,8 +18,8 @@
                         <td>{{employee.employeerole}}</td>
                         <td>{{employee.employeehiredate | date:'dd/MM/yyyy'}}</td>
                         <td>{{employee.restaurant?.restaurantname}}</td>
-                        <td><a class="btn btn-danger" (click)="deleteEmployee(employee)">Delete</a></td>
-                        <td><a class="btn btn-success" [routerLink]="['/updateEmployee',employee.employeeid]">Modify</a></td>
+                        <td><a class="btn btn-danger" *ngIf="authService.isAdmin()" (click)="deleteEmployee(employee)">Delete</a></td>
+                        <td><a class="btn btn-success" *ngIf="authService.isAdmin()" [routerLink]="['/updateEmployee',employee.employeeid]">Modify</a></td>
                     </tr>
                 </tbody>
             </table>

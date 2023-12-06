@@ -14,7 +14,7 @@ export class UpdateEmployeeComponent implements OnInit {
 
   currentEmployee = new Employee();
   restaurants! : Restaurant[];
-  updatedRestaurantid! : number
+  updatedRestaurantid! : number;
 
   constructor(private activatedRoute: ActivatedRoute,
               private router :Router,

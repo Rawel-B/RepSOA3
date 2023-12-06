@@ -9,6 +9,12 @@ import { UpdateEmployeeComponent } from './update-employee/update-employee.compo
 import { HttpClientModule } from '@angular/common/http';
 import { SearchByRestaurantComponent } from './search-by-restaurant/search-by-restaurant.component';
 import { SearchByNameComponent } from './search-by-name/search-by-name.component';
+import { SearchFilterPipe } from './search-filter.pipe';
+import { ListRestaurantsComponent } from './list-restaurants/list-restaurants.component';
+import { UpdateRestaurantComponent } from './update-restaurant/update-restaurant.component';
+import { LoginComponent } from './login/login.component';
+import { ForbiddenComponent } from './forbidden/forbidden.component';
+
 
 @NgModule({
   declarations: [
@@ -17,7 +23,12 @@ import { SearchByNameComponent } from './search-by-name/search-by-name.component
     AddEmployeeComponent,
     UpdateEmployeeComponent,
     SearchByRestaurantComponent,
-    SearchByNameComponent
+    SearchByNameComponent,
+    SearchFilterPipe,
+    ListRestaurantsComponent,
+    UpdateRestaurantComponent,
+    LoginComponent,
+    ForbiddenComponent
   ],
   imports: [
     BrowserModule,

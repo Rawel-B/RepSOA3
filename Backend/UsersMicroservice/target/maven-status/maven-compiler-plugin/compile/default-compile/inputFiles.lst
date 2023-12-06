@@ -1,0 +1,11 @@
+C:\Users\rawel\OneDrive\Documents\Study\SOA\TP3\Project2\Backend\UsersMicroservice\src\main\java\com\tp\users\entities\Role.java
+C:\Users\rawel\OneDrive\Documents\Study\SOA\TP3\Project2\Backend\UsersMicroservice\src\main\java\com\tp\users\entities\User.java
+C:\Users\rawel\OneDrive\Documents\Study\SOA\TP3\Project2\Backend\UsersMicroservice\src\main\java\com\tp\users\security\MyUserDetailsService.java
+C:\Users\rawel\OneDrive\Documents\Study\SOA\TP3\Project2\Backend\UsersMicroservice\src\main\java\com\tp\users\security\JWTAuthenticationFilter.java
+C:\Users\rawel\OneDrive\Documents\Study\SOA\TP3\Project2\Backend\UsersMicroservice\src\main\java\com\tp\users\security\SecParams.java
+C:\Users\rawel\OneDrive\Documents\Study\SOA\TP3\Project2\Backend\UsersMicroservice\src\main\java\com\tp\users\UsersMicroserviceApplication.java
+C:\Users\rawel\OneDrive\Documents\Study\SOA\TP3\Project2\Backend\UsersMicroservice\src\main\java\com\tp\users\service\UserService.java
+C:\Users\rawel\OneDrive\Documents\Study\SOA\TP3\Project2\Backend\UsersMicroservice\src\main\java\com\tp\users\service\UserServiceImpl.java
+C:\Users\rawel\OneDrive\Documents\Study\SOA\TP3\Project2\Backend\UsersMicroservice\src\main\java\com\tp\users\security\SecurityConfig.java
+C:\Users\rawel\OneDrive\Documents\Study\SOA\TP3\Project2\Backend\UsersMicroservice\src\main\java\com\tp\users\repos\UserRepository.java
+C:\Users\rawel\OneDrive\Documents\Study\SOA\TP3\Project2\Backend\UsersMicroservice\src\main\java\com\tp\users\repos\RoleRepository.java

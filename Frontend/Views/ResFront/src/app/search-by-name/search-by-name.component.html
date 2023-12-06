@@ -1,1 +1,47 @@
-<p>search-by-name works!</p>
+<div class="container">
+    <!--<form class="form-inline">
+        <div class="form-group mx-sm-3 mb-2 mt-2 ">
+            <label>Employee Name</label>
+            <input type="text" class="form-control" [(ngModel)]="Employeename" name="Employeename" class="form-control">
+            <button type="submit" (click)="searchEmps()" class="btn btn-primary mb-2 ml-2">Search</button>
+        </div>
+    </form>-->
+    <form class="form-inline">
+        <div class="form-group mx-sm-3 mb-2 mt-2 ">
+        <label>Employee Name</label>
+        <input class="form-control" #searchTerm (keyup)="onKeyUp(searchTerm.value)">
+        </div>
+    </form>
+    <!--<form class="form-inline">
+        <div class="form-group mx-sm-3 mb-2 mt-2 ">
+        <label>Employee Name</label>
+        <input #name [(ngModel)]="searchTerm" name="searchTerm" class="form-control" >
+        </div>
+    </form>-->                     
+    <div class="card shadow mb-4">
+        <div class="card-body">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Role</th>
+                        <th>Hire Date</th>
+                        <th>Restaurant</th>
+                    </tr>
+                </thead>
+                <tbody *ngFor="let employee of employees">
+                    <tr>
+                        <td>{{employee.employeeid}}</td>
+                        <td>{{employee.employeename}}</td>
+                        <td>{{employee.employeerole}}</td>
+                        <td>{{employee.employeehiredate | date:'dd/MM/yyyy'}}</td>
+                        <td>{{employee.restaurant?.restaurantname}}</td>
+                        <!--<td><a class="btn btn-danger" (click)="deleteEmployee(employee)">Delete</a></td>
+                        <td><a class="btn btn-success" [routerLink]="['/updateEmployee',employee.employeeid]">Modify</a></td>-->
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
