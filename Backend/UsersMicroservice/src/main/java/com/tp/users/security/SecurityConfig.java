@@ -40,13 +40,15 @@ public class SecurityConfig {
 	}
  	
  	 @Bean
-     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-          http.csrf().disable()
-                  .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
-                  .authorizeHttpRequests()
-				  .requestMatchers("/login").permitAll()
-				  .requestMatchers("/all").hasAnyAuthority("ADMIN")
-				  .anyRequest().authenticated();
+     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception { 
+		    http.csrf().disable()
+		    .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
+		                        .authorizeHttpRequests()
+		                        .requestMatchers("/login").permitAll()
+		                        .requestMatchers("/all").hasAnyAuthority("ADMIN")
+		                        .anyRequest().authenticated().and()
+		                        .addFilterBefore(new JWTAuthenticationFilter (authMgr),UsernamePasswordAuthenticationFilter.class)
+		                        .addFilterBefore(new JWTAuthorizationFilter(),UsernamePasswordAuthenticationFilter.class);
 		 return http.build();
 	}
 }

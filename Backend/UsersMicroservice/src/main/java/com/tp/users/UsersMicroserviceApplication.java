@@ -44,6 +44,4 @@ public class UsersMicroserviceApplication {
 		return new BCryptPasswordEncoder();
 	}
 
-
-
 }
